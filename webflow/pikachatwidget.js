@@ -395,7 +395,7 @@
     top: 12px;
     left: 10px;
     right: 10px;
-    bottom: 0;
+    bottom: 8px;
     padding-bottom: env(safe-area-inset-bottom, 1px);
     width: auto;
     height: auto;
@@ -550,7 +550,7 @@
             <textarea placeholder="Message" required></textarea>
 
            <label class="chat-disclaimer">
-  <input type="checkbox" required />
+<input type="checkbox" required checked />
   <span>
     By submitting, you agree to receive SMS or emails from Pika Landscapes.
     Standard messaging rates may apply. You can opt out at any time by replying STOP.
