@@ -1,4 +1,4 @@
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     if (window.location.href.includes('/minibin-rentals-material-delivery')) {
       // Load Roboto Font
       const roboto = document.createElement('link');
@@ -390,26 +390,27 @@
     font-size: 10px;
   }
 
-  #chat-box {
-    position: fixed;
-    top: 12px;
-    left: 10px;
-    right: 10px;
-    bottom: 8px;
-    padding-bottom: env(safe-area-inset-bottom, 1px);
-    width: auto;
-    height: auto;
-    background: #fff;
-    border-radius: 12px;
-    z-index: var(--z-chat-box);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-    display: none;
-    flex-direction: column;
-    opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
+ #chat-box {
+  position: fixed;
+  top: 12px;
+  left: 10px;
+  right: 10px;
+  bottom: 8px; /* remove flush pin */
+  margin-bottom: 8px; /* create space like top */
+  width: auto;
+  height: auto;
+  max-height: calc(100vh - 24px); /* slightly shorter to respect top+bottom margin */
+  background: #fff;
+  border-radius: 12px;
+  z-index: var(--z-chat-box);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
 
   #chat-box.open {
     display: flex;
@@ -550,7 +551,7 @@
             <textarea placeholder="Message" required></textarea>
 
            <label class="chat-disclaimer">
-<input type="checkbox" required checked />
+  <input type="checkbox" required checked />
   <span>
     By submitting, you agree to receive SMS or emails from Pika Landscapes.
     Standard messaging rates may apply. You can opt out at any time by replying STOP.
